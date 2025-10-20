@@ -17,7 +17,10 @@ public class Main {
             System.out.println("6. Sort tasks by created date");
             System.out.println("7. Sort tasks by completed date");
             System.out.println("8. Sort tasks by title");
-            System.out.println("9. EXIT");
+            System.out.println("9. Clear all tasks");
+            System.out.println("0. EXIT");
+
+            System.out.print("Your choice: ");
 
             String input = scanner.nextLine();
             int choice;
@@ -78,11 +81,15 @@ public class Main {
                     System.out.println("Tasks sorted by title.");
                     break;
                 case 9:
+                    manager.clearAllTasks();
+                    System.out.println("All tasks is cleaned.");
+                    break;
+                case 0:
                     manager.saveTasks();
                     System.out.println(("Exiting..."));
                     return;
                 default:
-                    System.out.println("Wrong choice!");
+                    System.out.println("Please enter a number between 1-9");
 
             }
         }

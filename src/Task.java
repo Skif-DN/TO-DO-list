@@ -28,6 +28,7 @@ public class Task implements Serializable {
         return isDone;
     }
 
+    @Override
     public String toString (){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         String createdStr = createdTask.format(formatter);

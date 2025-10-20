@@ -14,27 +14,31 @@ public class TaskManager {
     }
 
     public void removeTask(int index){
-        int realIndex = index - 1;
-        if (realIndex >= 0 && realIndex < tasks.size()){
-            tasks.remove((realIndex));
+        int rmIndex = index - 1;
+        if (rmIndex >= 0 && rmIndex < tasks.size()){
+            tasks.remove((rmIndex));
         } else {
             System.out.println("Incorrect index!");
         }
     }
 
+    public void clearAllTasks(){
+        tasks.clear();
+    }
+
     public void markTaskAsDone(int index) {
-        int realIndex = index - 1;
-        if (realIndex >= 0 && realIndex < tasks.size()) {
-            tasks.get(realIndex).markAsDone();
+        int asDoneIndex = index - 1;
+        if (asDoneIndex >= 0 && asDoneIndex < tasks.size()) {
+            tasks.get(asDoneIndex).markAsDone();
         } else {
             System.out.println("Incorrect index!");
         }
     }
 
     public void editTask(int index, String newTitle, String newDescription){
-        int realIndex = index - 1;
-        if(realIndex >= 0 && realIndex < tasks.size()) {
-            Task task = tasks.get(realIndex);
+        int editIndex = index - 1;
+        if(editIndex >= 0 && editIndex < tasks.size()) {
+            Task task = tasks.get(editIndex);
             task.setTitle(newTitle);
             task.setDescription(newDescription);
         } else {
