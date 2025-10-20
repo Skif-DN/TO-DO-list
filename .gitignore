@@ -32,3 +32,4 @@ bin/
 # Data files
 *.dat
 *.iml
+*.ser
